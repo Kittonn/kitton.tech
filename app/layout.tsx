@@ -1,5 +1,7 @@
 /* eslint-disable @next/next/no-head-element */
 import "@styles/globals.css";
+import Navbar from "@components/Navbar";
+import Footer from "@components/Footer";
 
 export default function RootLayout({
   children,
@@ -7,9 +9,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html>
+    <html lang="en">
       <head />
-      <body>{children}</body>
+      <body className="bg-[#0a100d]">
+        <Navbar />
+        <main className="container mx-auto min-h-screen lg:max-w-screen-lg px-5">
+          {children}
+        </main>
+        <Footer />
+      </body>
     </html>
   );
 }
