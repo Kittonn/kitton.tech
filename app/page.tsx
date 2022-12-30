@@ -2,18 +2,18 @@ import Link from "next/link";
 
 export default function Page() {
   return (
-    <div className="min-h-screen flex flex-col justify-center items-center text-center">
+    <div className="flex min-h-screen flex-col items-center justify-center text-center">
       <div>
-        <h1 className="font-extrabold text-5xl text-transparent bg-gradient-to-r from-sky-500 via-blue-500 to-blue-600 bg-clip-text md:text-8xl sm:text-7xl ">
+        <h1 className="bg-gradient-to-r from-sky-500 via-blue-500 to-blue-600 bg-clip-text text-5xl font-extrabold text-transparent sm:text-7xl md:text-8xl ">
           KITTIPOD L.
         </h1>
-        <p className="font-light mt-2 text-gray-400 md:text-xl">
+        <p className="mt-2 font-light text-gray-400 md:text-xl">
           I'm a full-stack developer and penetration tester.
         </p>
       </div>
-      <div className="grid grid-cols-1 mt-10 sm:mt-12 gap-6 sm:gap-8 sm:grid-cols-2">
+      <div className="mt-10 grid grid-cols-1 gap-6 sm:mt-12 sm:grid-cols-2 sm:gap-8">
         <Link
-          className="rounded-lg font-medium py-3 px-7 flex items-center justify-center border-[1px] border-gray-200 bg-gray-200 hover:bg-transparent hover:text-gray-200"
+          className="flex items-center justify-center rounded-lg border-[1px] border-gray-200 bg-gray-200 py-3 px-7 font-medium hover:bg-transparent hover:text-gray-200"
           href="https://github.com/kittonn"
           target="_blank"
           rel="noreferrer"
@@ -32,7 +32,7 @@ export default function Page() {
           &nbsp;Github
         </Link>
         <Link
-          className="rounded-lg font-medium py-3 px-7 flex items-center justify-center border-[1px] border-blue-400 text-blue-400 hover:bg-gradient-to-r hover:from-indigo-500 hover:to-blue-500 hover:text-gray-200 hover:border-gray-200"
+          className="flex items-center justify-center rounded-lg border-[1px] border-blue-400 py-3 px-7 font-medium text-blue-400 hover:border-gray-200 hover:bg-gradient-to-r hover:from-indigo-500 hover:to-blue-500 hover:text-gray-200"
           href="https://www.linkedin.com/in/kittonn/"
           target="_blank"
           rel="noreferrer"

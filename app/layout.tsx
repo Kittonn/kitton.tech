@@ -13,7 +13,7 @@ export default function RootLayout({
       <head />
       <body className="bg-[#0a100d]">
         <Navbar />
-        <main className="container mx-auto min-h-screen lg:max-w-screen-lg px-5">
+        <main className="container mx-auto min-h-screen px-5 lg:max-w-screen-lg">
           {children}
         </main>
         <Footer />
