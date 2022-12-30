@@ -56,7 +56,7 @@ export default function Navbar() {
               />
             </svg>
           </Link>
-          <button onClick={() => setToggle(!toggle)} className="sm:hidden z-50">
+          <button id="menuButton" aria-label="hamburger menu" onClick={() => setToggle(!toggle)} className="sm:hidden z-50">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 448 512"
