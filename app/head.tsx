@@ -1,11 +1,12 @@
-import DefaultTags from "@components/DefaultTags";
+import DefaultHead from "@components/Head";
 
 export default function Head() {
   return (
     <>
-      <DefaultTags />
-      <title>Kitton - Personal Website</title>
-      <meta name="description" content="Kitton's personal website🚀" />
+      <DefaultHead
+        title="Kitton - Personal Website"
+        description="Kitton's personal website🚀"
+      />
     </>
   );
 }
