@@ -1,6 +1,6 @@
 import { use } from "react";
 import { ParsedUrlQuery } from "querystring";
-import { getBlogBySlug, getBlogs } from "@lib/blog";
+import { getBlogBySlug } from "@lib/blog";
 
 interface Params extends ParsedUrlQuery {
   slug: string;

@@ -11,7 +11,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head />
-      <body className="bg-[#0a100d]">
+      <body className="bg-[#0a100d] scroll-smooth">
         <Navbar />
         <main className="container mx-auto min-h-screen px-5 lg:max-w-screen-lg">
           {children}

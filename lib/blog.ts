@@ -5,18 +5,11 @@ import { BlogI } from "@interfaces/blog";
 import { remark } from "remark";
 import html from "remark-html";
 import remarkGfm from "remark-gfm";
+import { readingTime } from "./readingTime";
 
 const markdownToHTML = async (markdown: string) => {
   const result = await remark().use(html).use(remarkGfm).process(markdown);
   return result.toString();
-};
-
-const readingTime = (text: string) => {
-  const wordsPerMinute = 200;
-  const noOfWords = text.split(/\s/g).length;
-  const minutes = noOfWords / wordsPerMinute;
-  const readTime = Math.ceil(minutes);
-  return readTime;
 };
 
 const blogDir = (): string => join(process.cwd(), "/content/blogs");
@@ -48,7 +41,10 @@ const getBlogBySlug = async (slug: string) => {
 
 const getBlogs = (): BlogI[] => {
   const names = getBlogFileNames();
-  const items = names.map(getBlog);
+  const items = names
+    .map(getBlog)
+    .filter((item) => item.published)
+    .sort((a, b) => (a.date > b.date ? -1 : 1));
   return items;
 };
 

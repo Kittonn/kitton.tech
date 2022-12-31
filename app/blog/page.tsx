@@ -2,17 +2,12 @@ import { use } from "react";
 import { getBlogs } from "@lib/blog";
 import Link from "next/link";
 import Image from "next/image";
+import { shortify } from "@lib/shortify";
+import { dateFormatter } from "@lib/dateFormatter";
 
 const getInitialBlogs = async () => {
   const blogs = getBlogs();
   return blogs;
-};
-
-const shortify = (text: string, maxLength: number) => {
-  if (text.length > maxLength) {
-    return text.substring(0, maxLength) + "...";
-  }
-  return text;
 };
 
 export default function Page() {
@@ -21,20 +16,52 @@ export default function Page() {
   return (
     <div className="text-gray-300">
       <div>
+        <h1 className="bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-5xl font-semibold text-transparent">
+          All Posts
+        </h1>
+        {/* <input type="text" /> */}
+      </div>
+      <div className="mt-12 border-b-[1px] border-b-gray-400"></div>
+      <div className="">
         {blogs.map((blog, index) => (
-          <div key={index}>
-            <div className="">
-              <Image
-                src={blog.coverImage}
-                alt={blog.title}
-                width={500}
-                height={300}
-              />
+          <div
+            key={index}
+            className="gap-x-4 space-x-2 border-b-[1px] border-b-gray-400 py-10 md:grid md:grid-cols-3 md:gap-x-0 xl:space-y-0"
+          >
+            <div className="relative mt-0 h-72 w-full md:mt-4 md:h-36 md:w-56 lg:mt-2 lg:h-44 lg:w-64">
+              <span className="blogImage absolute inset-0 m-0 box-border block overflow-hidden border-0 bg-none p-0 opacity-100">
+                <Image
+                  src={blog.coverImage}
+                  alt={blog.title}
+                  fill
+                  className="absolute inset-0 m-auto box-border block h-0 max-h-full min-h-full w-0 min-w-full max-w-full rounded-xl border-0 object-cover p-0"
+                  sizes="100vw"
+                  loading="lazy"
+                />
+              </span>
             </div>
-            <div>
-              <Link href={`/blog/${blog.slug}`}>{blog.title}</Link>
-              <p>{shortify(blog.description, 100)}</p>
-              <p>{blog.readingTime} min</p>
+            <div className="mt-4 space-y-3 md:col-span-2 md:mt-0">
+              <Link
+                href={`/blog/${blog.slug}`}
+                className="text-xl font-semibold hover:bg-gradient-to-r hover:from-indigo-500 hover:to-blue-500 hover:bg-clip-text hover:text-transparent"
+              >
+                {blog.title}
+              </Link>
+              <p className="text-sm font-medium text-[#4cc9f0]">
+                {dateFormatter(blog.date)}
+                <span className="ml-4">{blog.readingTime} min</span>
+              </p>
+              <p className="text-gray-400">{shortify(blog.description, 100)}</p>
+              <div className="flex flex-wrap">
+                {blog.tags.map((tag, index) => (
+                  <span
+                    key={index}
+                    className="mt-4 mr-4 rounded-full bg-gray-700 px-3 py-[2px] text-xs font-medium text-[#4cc9f0]"
+                  >
+                    #{tag.toUpperCase()}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
         ))}

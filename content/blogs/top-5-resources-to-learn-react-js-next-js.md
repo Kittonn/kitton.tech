@@ -1,10 +1,10 @@
 ---
 title: Top 5 Resources To Learn React JS /Next.JS
 description: Next JS is an amazing framework for building SSR apps. There is a lot of resources to learn it. Find out how they differ and discover your favorite one.
-author: Filip Jerga
-authorImage: https://thrangra.sirv.com/Rust_small.jpg
-coverImage: https://images.unsplash.com/photo-1516259762381-22954d7d3ad2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1389&q=50
+coverImage: "/assets/blogs/top-5-resource.webp"
 date: "2022-10-25"
+published: false
+tags: ["React", "Next.JS", "Resources"]
 ---
 
 If you are a JavaScript or React enthusiast and user, then you would most certainly be familiar with Next.JS. A trendy React framework, Next.JS is the dearest of all web development news portals out there.
