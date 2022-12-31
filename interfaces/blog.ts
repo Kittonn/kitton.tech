@@ -1,3 +1,5 @@
+import { ParsedUrlQuery } from "querystring";
+
 export interface BlogI {
   title: string;
   description: string;
@@ -8,4 +10,12 @@ export interface BlogI {
   readingTime: number;
   published: boolean;
   tags: string[];
+}
+
+export interface ParamsI extends ParsedUrlQuery {
+  slug: string;
+}
+
+export interface ParamsPropsI {
+  params: ParamsI;
 }

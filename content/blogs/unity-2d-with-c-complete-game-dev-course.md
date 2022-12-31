@@ -4,7 +4,7 @@ description: Create the complete 2D survival game in Unity with C#. Learn best p
 coverImage: "/assets/blogs/unity.webp"
 date: "2022-01-25"
 published: true
-tags: ["Unity", "C#", "Game Development"]
+tags: ["unity", "c#", "game development"]
 ---
 
 **What is Unity?**

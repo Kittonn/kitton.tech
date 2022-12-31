@@ -4,7 +4,7 @@ description: Learn how to write markdown. This is just a testing blog.
 coverImage: "/assets/blogs/markdown.webp"
 date: "2022-04-20"
 published: true
-tags: ["Markdown", "Example"]
+tags: ["markdown", "example"]
 ---
 
 **Advertisement :)**

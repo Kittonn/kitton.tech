@@ -4,7 +4,7 @@ description: Learn how to use React / Next JS, Solidity, and Pinata(IPFS) to cre
 coverImage: "/assets/blogs/nft.webp"
 date: "2022-06-25"
 published: true
-tags: ["Crypto", "nft"]
+tags: ["crypto", "nft"]
 ---
 
 Next.js gives you the best developer experience with all the features you need for production: hybrid static & server rendering, TypeScript support, smart bundling, route pre-fetching, etc. No config is necessary.

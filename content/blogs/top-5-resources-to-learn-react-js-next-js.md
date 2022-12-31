@@ -4,7 +4,7 @@ description: Next JS is an amazing framework for building SSR apps. There is a l
 coverImage: "/assets/blogs/top-5-resource.webp"
 date: "2022-10-25"
 published: false
-tags: ["React", "Next.JS", "Resources"]
+tags: ["react", "next.js", "resources"]
 ---
 
 If you are a JavaScript or React enthusiast and user, then you would most certainly be familiar with Next.JS. A trendy React framework, Next.JS is the dearest of all web development news portals out there.
