@@ -4,7 +4,7 @@ description: Learn programming in JS language, HTML, and CSS. Create a Web Appli
 coverImage: "/assets/blogs/web-development.webp"
 date: "2022-12-12"
 published: true
-tags: ["web development", "code", "js", "html", "css", "react js"]
+tags: ["web-development", "code", "js", "html", "css", "react.js"]
 ---
 
 **What is Javascript?**

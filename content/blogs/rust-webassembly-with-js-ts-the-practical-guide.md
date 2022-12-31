@@ -4,7 +4,7 @@ description: Learn how to code in Rust! Compile the code to WebAssembly, prepare
 coverImage: "/assets/blogs/rust.webp"
 date: "2022-03-25"
 published: true
-tags: ['rust', 'web development']
+tags: ['rust', 'web-development']
 ---
 
 **What is Rust?**
