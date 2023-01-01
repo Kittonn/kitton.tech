@@ -27,7 +27,7 @@ export default function Page() {
             >
               {tag.tag.toUpperCase()}
             </Link>
-            <span className="ml-4 text-gray-300">({tag.count})</span>
+            <span className="ml-2 text-gray-300">({tag.count})</span>
           </div>
         ))}
       </div>

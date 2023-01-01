@@ -31,6 +31,9 @@
       ],
       "@lib/*": [
         "lib/*"
+      ],
+      "@layouts/*": [
+        "layouts/*"
       ]
     },
     "plugins": [
