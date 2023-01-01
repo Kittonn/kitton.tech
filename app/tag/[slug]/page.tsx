@@ -1,7 +1,7 @@
 import { use } from "react";
 import { getBlogsByTag } from "@lib/tag";
 import { ParamsPropsI } from "@interfaces/blog";
-import BlogLayout from "@layouts/BlogLayout";
+import BlogLayout from "@components/BlogLayout";
 import { capitalize } from "@lib/capitalize";
 
 const getInitialBlogsByTags = async (slug: string) => {

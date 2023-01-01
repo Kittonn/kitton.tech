@@ -37,3 +37,7 @@ next-env.d.ts
 
 # editor
 .vscode
+
+# env
+.env
+cypress.env.json

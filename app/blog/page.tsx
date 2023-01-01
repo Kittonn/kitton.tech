@@ -1,6 +1,6 @@
 import { use } from "react";
 import { getBlogs } from "@lib/blog";
-import BlogLayout from "@layouts/BlogLayout";
+import BlogLayout from "@components/BlogLayout";
 
 const getInitialBlogs = async () => {
   const blogs = getBlogs();
