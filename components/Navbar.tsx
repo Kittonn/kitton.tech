@@ -20,12 +20,14 @@ export default function Navbar() {
   const [toggle, setToggle] = useState(false);
   const pathname = usePathname();
 
+  const filterPathname = `/${pathname?.split("/")[1]}`;
+
   const handleClick = () => setToggle(false);
 
   return (
-    <header className="fixed w-full text-lg font-medium border-b-[1px] border-b-gray-600 text-gray-300 bg-[#0a100d] opacity-90 z-50">
-      <nav className="flex justify-between items-center container mx-auto px-5 py-3 lg:max-w-screen-lg">
-        <div className="flex items-center justify-between w-full z-50">
+    <header className="fixed top-0 left-0 z-50 w-full border-b-[1px] border-b-gray-600 bg-[#0a100d] text-lg font-medium text-gray-300 opacity-90">
+      <nav className="container mx-auto flex items-center justify-between px-5 py-3 lg:max-w-screen-lg">
+        <div className="z-50 flex w-full items-center justify-between">
           <Link href="/" aria-label="Go to homepage">
             <svg
               width="32"
@@ -56,7 +58,12 @@ export default function Navbar() {
               />
             </svg>
           </Link>
-          <button id="menuButton" aria-label="hamburger menu" onClick={() => setToggle(!toggle)} className="sm:hidden z-50">
+          <button
+            id="menuButton"
+            aria-label="hamburger menu"
+            onClick={() => setToggle(!toggle)}
+            className="z-50 sm:hidden"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 448 512"
@@ -76,18 +83,18 @@ export default function Navbar() {
         </div>
         <div
           className={`absolute ${
-            toggle ? "top-0" : "top-[-1000px]"
-          } left-0 bg-[#0a100d] opacity-90 text-center transition-all sm:transition-none ease-in-out duration-400 min-h-screen sm:min-h-fit flex items-center justify-center sm:block w-full sm:w-fit sm:relative sm:top-0`}
+            toggle ? "top-0" : "top-[-4000px]"
+          } duration-400 left-0 flex min-h-screen w-full items-center justify-center bg-[#0a100d] text-center opacity-90 transition-all ease-in-out sm:relative sm:top-0 sm:block sm:min-h-fit sm:w-fit sm:transition-none`}
         >
-          <ul className="flex flex-col space-y-6 sm:space-y-0 sm:space-x-8 sm:flex-row items-center justify-center">
+          <ul className="flex flex-col items-center justify-center space-y-6 sm:flex-row sm:space-y-0 sm:space-x-8">
             {links.map((link) => (
               <li key={link.id}>
                 <Link
                   onClick={handleClick}
                   href={link.url}
                   className={`${
-                    pathname === link.url
-                      ? "text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-500"
+                    filterPathname === link.url
+                      ? "bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent"
                       : ""
                   }`}
                 >

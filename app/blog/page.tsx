@@ -1,7 +1,19 @@
+import { use } from "react";
+import { getBlogs } from "@lib/blog";
+import BlogLayout from "@components/BlogLayout";
+
+const getInitialBlogs = async () => {
+  const blogs = getBlogs();
+  return blogs;
+};
+
 export default function Page() {
+  const blogs = use(getInitialBlogs());
+
   return (
-    <div className="min-h-screen flex justify-center items-center text-white">
-      <h1 className="text-2xl">Coming Soon💡</h1>
+    <div className="text-gray-300">
+  
+      <BlogLayout items={blogs} title={"All Posts"} />
     </div>
   );
 }
