@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { BlogI } from "@interfaces/blog";
-import BlogCard from "@components/BlogCard";
+import SearchBlog from "@components/SearchBlog";
 
 interface BlogLayoutI {
   items: BlogI[];
@@ -47,7 +47,7 @@ export default function BlogLayout({ items, title }: BlogLayoutI) {
           </svg>
         </div>
       </div>
-      <BlogCard items={filteredItems} />
+      <SearchBlog items={filteredItems} />
     </div>
   );
 }
